@@ -1,4 +1,425 @@
-<h3>Home</h3>
-<% @users.each do |user| %>
-  <p>User: <%=link_to user.name, user %></p>
-<% end %>
+<!-- nav -->  
+<nav class="navbar  navbar-fixed-top" role="navigation">
+    <!-- container -->
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html"><%= image_tag("logo.png", :alt => "Reality Watch Party", :class => "logo_top") %></a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse  navbar-collapse  navbar-ex1-collapse">
+        <ul class="nav  navbar-nav">
+            <li class="active">Home</li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Shows</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+            <li class="active">Login</li>
+        </ul>
+      </div><!-- /navbar-collapse -->
+    </div><!-- /container -->
+  </nav><!-- /nav --> 
+
+    <!-- masthead -->
+    <div class="jumbotron">
+      <h2 class="jumbotron--title">The Bachelor</h2>
+      <p class="jumbotron--sub-title">Reality Watch Party allows you to draft contestants on The Bachelor to be on your team. When they score, then you score. Show your friends you know the most about the show. <a href="#col-12">Sign up below</a></p>
+      <div id="rose"><%= image_tag("rose.jpg", :alt => "Rose", :class => "rose") %></div>
+    </div><!-- /masthead -->
+
+      <!-- intro -->
+      <section class="intro">
+        <div class="container">
+        </div>
+      </section><!-- /intro -->  
+
+      <!-- portfolio lr -->
+      <!--<div class="portfoliolr">
+        <div class="container">
+
+          <div class="row">
+            <div class="col-12  col-md-7  col-lg-6">
+              <img src="img/portfolio.png" class="img-responsive" alt="portfolio image"/>
+            </div>
+              <div class="col-12  col-md-offset-1  col-md-4  col-lg-offset-1  col-lg-5">
+                <h4 class="portfolio--title">Title</h4>
+                <p class="portfolio--sub-title">Sub title</p>
+                <p class="portfolio--paragraph">
+                  Something about the project goes here.  Maybe a little bit more if you've got a lot to say.
+                </p>
+                <a href="#" class="btn  btn--green">take a look</a>
+              </div>
+          </div>
+
+        </div>
+      </div>--><!-- /portfolio lr -->
+
+      <!-- portfolio feature -->
+      <div class="portfolio--feature">
+        <div class="container">
+
+          <div class="row" id="col-12">
+            <div class="col-12">
+              <h4 class="portfolio--feature__title">To join the party, invite yourself and your friends below</h4>
+              <p class="portfolio--feature__paragraph">
+                Give your team a name, then invite your friends to your team by entering in their email addresses. We will send them a single email that contains instructions on how easy it is for them to join the party.<br> Your friends will love you!
+              </p>
+
+              <form method="post" action="send-email.php" id="contact-form" class="form-horizontal" role="form">
+                  <div class="form-group">
+                    <label for="name" class="col-12  col-lg-2  control-label">Group Name:</label>
+                    <div class="col-12  col-lg-10">
+                      <input type="text" class="form-control" name="name" id="name" placeholder="Page Juan">
+                    </div>
+                  </div>                  
+                  <div class="form-group">
+                    <label for="email" class="col-12  col-lg-2  control-label">Your Email Address (for confirmation):</label>
+                    <div class="col-12  col-lg-10">
+                      <input type="email" class="form-control" name="email" id="email" placeholder="Email@address.com">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="name" class="col-12  col-lg-2  control-label">Invite up to Five friends by entering their email address here (separate different email addresses with commas):</label>
+                    <div class="col-12  col-lg-10">
+                      <input type="text" class="form-control" name="name" id="name" placeholder="Sarah@example.com, Jeff@gmail.com, Mike@email.com">
+                    </div>
+                  </div>  
+                  <p class="portfolio--feature__paragraph">
+                *By filling out the form above you agree that you are over 13 years old and have agreed to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.
+              </p>
+                  <div class="form-group">
+                    <div class="col-12  col-lg-10">
+                      <button type="submit" class="btn btn--green">Sign Up and Send Invites</button>
+                    </div>
+                  </div>
+                </form><!-- /comment form -->  
+            </div>
+          </div>
+
+        </div>
+      </div><!-- /portfolio feature -->
+
+       
+        <div class="container">
+
+
+          <div class="row">
+
+
+            <ul class="list-unstyled  portfolio--list  cs-style-3">
+             <h4 class="portfolio--feature__title" style="text-align: center; font-size:5rem; margin-top: -50px;">Meet the Bachelorettes</h4>
+              <li class="col-sm-6  col-md-4  col-lg-4">
+                <figure class="box  box--sm  text-center">
+                    <%= image_tag("alexis.jpg", :alt => "View") %>
+                    <figcaption>
+                      <p>Alexis</p>
+                      <a href="" class="green  pull-right">View</a>
+                    </figcaption>
+                </figure>
+              </li>
+              <li class="col-sm-6  col-md-4  col-lg-4">
+                <figure class="box  box--sm  text-center">
+                    <%= image_tag("alli.jpg", :alt => "Alli") %>
+                    <figcaption>
+                      <p>Alli</p>
+                      <a href="#" class="green  pull-right">View</a>
+                    </figcaption>
+                </figure>
+              </li>
+              <li class="col-sm-6  col-md-4  col-lg-4">
+                <figure class="box  box--sm  text-center">
+                    <%= image_tag("amy_j.jpg", :alt => "Amy J") %>
+                    <figcaption>
+                      <p>Amy J</p>
+                      <a href="#" class="green  pull-right">View</a>
+                    </figcaption>
+                </figure>
+              </li>
+              <li class="col-sm-6  col-md-4  col-lg-4">
+                <figure class="box  box--sm  text-center">
+                    <%= image_tag("amy_l.jpg", :alt => "Amy L") %>
+                    <figcaption>
+                      <p>Amy L</p>
+                      <a href="#" class="green  pull-right">View</a>
+                    </figcaption>
+                </figure>
+              </li>
+              <li class="col-sm-6  col-md-4  col-lg-4">
+                <figure class="box  box--sm  text-center">
+                    <%= image_tag("andi.jpg", :alt => "Andi") %>
+                    <figcaption>
+                      <p>Andi</p>
+                      <a href="#" class="green  pull-right">View</a>
+                    </figcaption>
+                </figure>
+              </li>
+              <li class="col-sm-6  col-md-4  col-lg-4">
+                <figure class="box  box--sm  text-center">
+                    <%= image_tag("ashley.jpg", :alt => "Ashley") %>
+                    <figcaption>
+                      <p>Ashley</p>
+                      <a href="#" class="green  pull-right">View</a>
+                    </figcaption>
+                </figure>
+              </li>
+              <li class="col-sm-6  col-md-4  col-lg-4">
+                <figure class="box  box--sm  text-center">
+                    <%= image_tag("cassandra.jpg", :alt => "Cassandra") %>
+                    <figcaption>
+                      <p>Cassandra</p>
+                      <a href="#" class="green  pull-right">View</a>
+                    </figcaption>
+                </figure>
+              </li>
+              <li class="col-sm-6  col-md-4  col-lg-4">
+                <figure class="box  box--sm  text-center">
+                    <%= image_tag("chantel.jpg", :alt => "Chantel") %>
+                    <figcaption>
+                      <p>Chantel</p>
+                      <a href="#" class="green  pull-right">View</a>
+                    </figcaption>
+                </figure>
+              </li>
+              <li class="col-sm-6  col-md-4  col-lg-4">
+                <figure class="box  box--sm  text-center">
+                    <%= image_tag("chelsie.jpg", :alt => "Chelsie") %>
+                    <figcaption>
+                      <p>Chelsie</p>
+                      <a href="#" class="green  pull-right">View</a>
+                    </figcaption>
+                </figure>
+              </li>
+              <li class="col-sm-6  col-md-4  col-lg-4">
+                <figure class="box  box--sm  text-center">
+                    <%= image_tag("christine.jpg", :alt => "Christine") %>
+                    <figcaption>
+                      <p>Christine</p>
+                      <a href="#" class="green  pull-right">View</a>
+                    </figcaption>
+                </figure>
+              </li>
+              <li class="col-sm-6  col-md-4  col-lg-4">
+                <figure class="box  box--sm  text-center">
+                    <%= image_tag("christy.jpg", :alt => "Christy") %>
+                    <figcaption>
+                      <p>Christy</p>
+                      <a href="#" class="green  pull-right">View</a>
+                    </figcaption>
+                </figure>
+              </li>
+              <li class="col-sm-6  col-md-4  col-lg-4">
+                <figure class="box  box--sm  text-center">
+                    <%= image_tag("clare.jpg", :alt => "Clare") %>
+                    <figcaption>
+                      <p>Clare</p>
+                      <a href="#" class="green  pull-right">View</a>
+                    </figcaption>
+                </figure>
+              </li>
+              <li class="col-sm-6  col-md-4  col-lg-4">
+                <figure class="box  box--sm  text-center">
+                    <%= image_tag("danielle.jpg", :alt => "Danielle") %>
+                    <figcaption>
+                      <p>Danielle</p>
+                      <a href="#" class="green  pull-right">View</a>
+                    </figcaption>
+                </figure>
+              </li>
+              <li class="col-sm-6  col-md-4  col-lg-4">
+                <figure class="box  box--sm  text-center">
+                    <%= image_tag("elise.jpg", :alt => "Elise") %>
+                    <figcaption>
+                      <p>Elise</p>
+                      <a href="#" class="green  pull-right">View</a>
+                    </figcaption>
+                </figure>
+              </li>
+              <li class="col-sm-6  col-md-4  col-lg-4">
+                <figure class="box  box--sm  text-center">
+                    <%= image_tag("kat.jpg", :alt => "Kat") %>
+                    <figcaption>
+                      <p>Kat</p>
+                      <a href="#" class="green  pull-right">View</a>
+                    </figcaption>
+                </figure>
+              </li>
+              <li class="col-sm-6  col-md-4  col-lg-4">
+                <figure class="box  box--sm  text-center">
+                    <%= image_tag("kelly.jpg", :alt => "Kelly") %>
+                    <figcaption>
+                      <p>Kelly</p>
+                      <a href="#" class="green  pull-right">View</a>
+                    </figcaption>
+                </figure>
+              </li>
+              <li class="col-sm-6  col-md-4  col-lg-4">
+                <figure class="box  box--sm  text-center">
+                    <%= image_tag("kylie.jpg", :alt => "Kylie") %>
+                    <figcaption>
+                      <p>Kylie</p>
+                      <a href="#" class="green  pull-right">View</a>
+                    </figcaption>
+                </figure>
+              </li>
+              <li class="col-sm-6  col-md-4  col-lg-4">
+                <figure class="box  box--sm  text-center">
+                    <%= image_tag("lacy.jpg", :alt => "Lacy") %>
+                    <figcaption>
+                      <p>Lacy</p>
+                      <a href="#" class="green  pull-right">View</a>
+                    </figcaption>
+                </figure>
+              </li>
+              <li class="col-sm-6  col-md-4  col-lg-4">
+                <figure class="box  box--sm  text-center">
+                    <%= image_tag("lauren_h.jpg", :alt => "Lauren H") %>
+                    <figcaption>
+                      <p>Lauren H</p>
+                      <a href="#" class="green  pull-right">View</a>
+                    </figcaption>
+                </figure>
+              </li>
+              <li class="col-sm-6  col-md-4  col-lg-4">
+                <figure class="box  box--sm  text-center">
+                    <%= image_tag("lauren_s.jpg", :alt => "Lauren S") %>
+                    <figcaption>
+                      <p>Lauren S</p>
+                      <a href="#" class="green  pull-right">View</a>
+                    </figcaption>
+                </figure>
+              </li>
+              <li class="col-sm-6  col-md-4  col-lg-4">
+                <figure class="box  box--sm  text-center">
+                    <%= image_tag("lucy.jpg", :alt => "Lucy") %>
+                    <figcaption>
+                      <p>Lucy</p>
+                      <a href="#" class="green  pull-right">View</a>
+                    </figcaption>
+                </figure>
+              </li>
+              <li class="col-sm-6  col-md-4  col-lg-4">
+                <figure class="box  box--sm  text-center">
+                    <%= image_tag("maggie.jpg", :alt => "Maggie") %>
+                    <figcaption>
+                      <p>Maggie</p>
+                      <a href="#" class="green  pull-right">View</a>
+                    </figcaption>
+                </figure>
+              </li>
+              <li class="col-sm-6  col-md-4  col-lg-4">
+                <figure class="box  box--sm  text-center">
+                    <%= image_tag("nikki.jpg", :alt => "Nikki") %>
+                    <figcaption>
+                      <p>Nikki</p>
+                      <a href="#" class="green  pull-right">View</a>
+                    </figcaption>
+                </figure>
+              </li>
+              <li class="col-sm-6  col-md-4  col-lg-4">
+                <figure class="box  box--sm  text-center">
+                    <%= image_tag("renee.jpg", :alt => "Renee") %>
+                    <figcaption>
+                      <p>Renee</p>
+                      <a href="#" class="green  pull-right">View</a>
+                    </figcaption>
+                </figure>
+              </li>
+              <li class="col-sm-6  col-md-4  col-lg-4">
+                <figure class="box  box--sm  text-center">
+                    <%= image_tag("sharleen.jpg", :alt => "Sharleen") %>
+                    <figcaption>
+                      <p>Sharleen</p>
+                      <a href="#" class="green  pull-right">View</a>
+                    </figcaption>
+                </figure>
+              </li>
+              <li class="col-sm-6  col-md-4  col-lg-4">
+                <figure class="box  box--sm  text-center">
+                    <%= image_tag("valerie.jpg", :alt => "Valerie") %>
+                    <figcaption>
+                      <p>Valerie</p>
+                      <a href="#" class="green  pull-right">View</a>
+                    </figcaption>
+                </figure>
+              </li>
+              <li class="col-sm-6  col-md-4  col-lg-4">
+                <figure class="box  box--sm  text-center">
+                    <%= image_tag("victoria.jpg", :alt => "Victoria") %>
+                    <figcaption>
+                      <p>Victoria</p>
+                      <a href="#" class="green  pull-right">View</a>
+                    </figcaption>
+                </figure>
+              </li>
+            </ul>
+
+          </div>
+
+        </div><!-- /portfolio list -->
+
+        <!-- twitter -->
+        <section class="tweet">
+          <div class="container">
+            <span class="icon-twitter"></span>
+            <h3 class="tweet--tweet">Why not drop us a line on Twitter?</h3>
+            <p class="tweet--secondary">We'd love to hear from you!</p>
+            <a href="https://twitter.com/RealityWParty" target="_blank" class="btn  btn--green" style="width: 300px;padding: 12px 30px">@RealityWparty</a>
+          </div>
+        </section><!-- /twitter -->
+
+    <!-- footer -->
+    <section class="footer  flush--top">
+      <div class="container">
+        <div class="row">
+          <ul class="list-unstyled  col-12  col-sm-3  col-lg-2">
+            <li><a href="mailto:bennyboobooboo@me.com">Email</a></li>
+            <li><a href="http://www.facebook.com/RealityWatchParty" target="_blank">Facebook</a></li>
+            <li><a href="https://twitter.com/RealityWParty" target="_blank">Tweet</a></li> 
+          </ul>
+          <ul class="list-unstyled  col-12  col-sm-2  col-lg-2">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Shows</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Login</a></li>
+          </ul>
+          <div class="col-lg-offset-3  text-right  hard--right">
+            <h3 class="footer--main-logo">Reality Watch Party</h3>
+            <p>
+              Copyright 2013-2014
+
+              <br>
+              The Bachelor, ABC, Bachelorettes are all trademarks of Disney, Inc.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section><!-- footer -->
+
+    <!-- jQuery -->
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+
+    <!-- Bootstrap js -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- touch effects for hover effects in portfolio section -->
+    <script src="js/toucheffects.min.js"></script>
+    <script src="js/classie.min.js"></script> 
+
+    <!-- bxSlider js file -->
+    <script src="js/jquery.bxslider.js"></script>
+
+    <!-- Envy js -->
+    <script src="js/envy.js"></script>
+
+    <!-- Optionally enable responsive features in IE8. Respond.js can be obtained from https://github.com/scottjehl/Respond -->
+    <script src="js/respond.min.js"></script>
